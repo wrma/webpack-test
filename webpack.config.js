@@ -1,18 +1,16 @@
 /*
 * @Author: ThinkPad
-* @Date:   2017-08-30 10:11:57
+* @Date:   2017-10-21 16:00:46
 * @Last Modified by:   ThinkPad
-* @Last Modified time: 2017-08-30 10:46:16
+* @Last Modified time: 2017-10-21 16:16:04
 */
-var config = {
-    entry: {
-        page1: "./src/page1.js",
-        page2: ["./src/page3.js","./src/page2.js"]
-    },
+
+const path = require('path');
+
+module.exports = {
+    entry: './src/index.js',
     output: {
-        path: __dirname + "/dist",
-        filename: "app.js"
+        filename: 'bundle.js',
+        path: path.resolve(__dirname,'dist')
     }
 };
-
- module.exports = config;
